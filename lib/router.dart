@@ -20,20 +20,10 @@ const String tosk_listscreenPage = 'tosk-listscreen';
 
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
-    case todo_barPage:
-      return MaterialPageRoute(builder: (context) => Todo_barPage());
-    case todo_bodyPage:
-      return MaterialPageRoute(builder: (context) => Todo_bodyPage());
     case todo_listscreenPage:
-      return MaterialPageRoute(builder: (context) => Todo_listscreenPage());
-    case tosk_barPage:
-      return MaterialPageRoute(builder: (context) => Tosk_barPage());
-    case tosk_bodyPage:
-      return MaterialPageRoute(builder: (context) => Tosk_bodyPage());
-    case tosk_floatPage:
-      return MaterialPageRoute(builder: (context) => Tosk_floatPage());
-    case tosk_listscreenPage:
-      return MaterialPageRoute(builder: (context) => Tosk_listscreenPage());
+      return MaterialPageRoute(builder: (context) => todoScreen());
+    // case tosk_listscreenPage:
+    //   return MaterialPageRoute(builder: (context) => taskListscreen());
     default:
       throw ("This is not available");
   }

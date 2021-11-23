@@ -1,7 +1,13 @@
-class task {
+import 'package:exercise3/models/todo.dart';
+
+class Task {
   String ti;
   bool checked;
 
-  task({this.ti = "", this.checked = false});
-  task.copy(task from) : this(ti: from.ti, checked: from.checked);
+  Task(this.ti, this.checked);
+
+  update(Task tas) {
+    this.ti = tas.ti;
+    this.checked = tas.checked;
+  }
 }

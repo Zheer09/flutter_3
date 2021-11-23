@@ -1,20 +1,24 @@
 import 'package:exercise3/models/task.dart';
 
-import 'package:exercise3/models/task.dart';
-
 class todo {
   String title;
-  List<task> tasks;
+  List<Task> task;
 
   int get perc {
-    return perc;
+    int done = 0;
+    for (int i = 0; i < task.length; i++) {
+      if (task[i].checked == true) {
+        done++;
+      }
+    }
+    return ((done / task.length) * 100).toInt();
   }
 
-  todo(this.title, this.tasks);
+  todo(this.title, this.task);
+  todo.copy(todo from) : this(from.title, [...from.task]);
 
-  update(todo t) {
-    this.title = t.title;
-    this.tasks = t.tasks;
-    perc;
+  update(todo to) {
+    this.title = to.title;
+    this.task = to.task;
   }
 }

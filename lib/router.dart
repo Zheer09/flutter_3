@@ -10,21 +10,21 @@ import 'package:exercise3/screens/tosk_list/task_list_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-const String todo_barPage = 'todo-bar';
-const String todo_bodyPage = 'todo-body';
-const String todo_listscreenPage = 'todo-listscreen';
-const String tosk_barPage = 'tosk-bar';
-const String tosk_bodyPage = 'tosk-body';
-const String tosk_floatPage = 'tosk-float';
-const String tosk_listscreenPage = 'tosk-listscreen';
+// const String todo_barPage = 'todo-bar';
+// const String todo_bodyPage = 'todo-body';
+// const String todo_listscreenPage = 'todo-listscreen';
+// const String tosk_barPage = 'tosk-bar';
+// const String tosk_bodyPage = 'tosk-body';
+// const String tosk_floatPage = 'tosk-float';
+// const String tosk_listscreenPage = 'tosk-listscreen';
 
-Route<dynamic> controller(RouteSettings settings) {
-  switch (settings.name) {
-    case todo_listscreenPage:
-      return MaterialPageRoute(builder: (context) => todoScreen());
-    // case tosk_listscreenPage:
-    //   return MaterialPageRoute(builder: (context) => taskListscreen());
-    default:
-      throw ("This is not available");
-  }
-}
+// Route<dynamic> controller(RouteSettings settings) {
+//   switch (settings.name) {
+//     case todo_listscreenPage:
+//       return MaterialPageRoute(builder: (context) => todoScreen());
+//     // case tosk_listscreenPage:
+//     //   return MaterialPageRoute(builder: (context) => taskListscreen());
+//     default:
+//       throw ("This is not available");
+//   }
+// }

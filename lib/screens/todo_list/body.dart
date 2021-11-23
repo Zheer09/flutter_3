@@ -12,6 +12,7 @@ class todoBody extends StatefulWidget {
 
 class _todoBodyState extends State<todoBody> {
   final List<todo> todoli = myTodol;
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -19,20 +20,26 @@ class _todoBodyState extends State<todoBody> {
               title: Text(todoli[index].title),
               subtitle: Text("This list has " +
                   todoli[index].task.length.toString() +
-                  "tasks"),
+                  " task(S)"),
               trailing: CircleAvatar(
                 child: Text(todoli[index].perc.toString()),
               ),
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                final result = await Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => taskListscreen(todoli[index])));
+                        builder: (context) =>
+                            taskListscreen(todo.copy(todoli[index]))));
+                if (result != null) {
+                  todoli[index].update(result);
+                  setState(() {});
+                }
+                if (result == null) {
+                  setState(() {});
+                }
               },
             ),
-        separatorBuilder: (context, index) => Divider(
-              color: Colors.blueGrey,
-            ),
+        separatorBuilder: (context, index) => Divider(color: Colors.blueGrey),
         itemCount: todoli.length);
   }
 }

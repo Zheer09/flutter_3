@@ -15,7 +15,8 @@ class todo {
   }
 
   todo(this.title, this.task);
-  todo.copy(todo from) : this(from.title, [...from.task]);
+  todo.copy(todo from)
+      : this(from.title, [for (Task _task in from.task) Task.copy(_task)]);
 
   update(todo to) {
     this.title = to.title;

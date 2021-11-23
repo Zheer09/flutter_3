@@ -1,8 +1,12 @@
+import 'package:exercise3/models/todo.dart';
 import 'package:flutter/material.dart';
 import 'package:exercise3/router.dart';
+import 'bar.dart';
+import 'body.dart';
 
 class todoScreen extends StatefulWidget {
-  const todoScreen({Key? key}) : super(key: key);
+  final List<todo> tod;
+  todoScreen(this.tod);
 
   @override
   _todoScreenState createState() => _todoScreenState();
@@ -11,6 +15,13 @@ class todoScreen extends StatefulWidget {
 class _todoScreenState extends State<todoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return WillPopScope(
+        onWillPop: () => Future.value(false),
+        child: SafeArea(
+          child: Scaffold(
+            appBar: Bartodo(),
+            body: todoBody(),
+          ),
+        ));
   }
 }

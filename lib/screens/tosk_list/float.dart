@@ -13,18 +13,18 @@ class Float extends StatelessWidget {
         FloatingActionButton.extended(
           heroTag: null,
           onPressed: () {
-            Navigator.pop(context, null);
+            Navigator.pop(context, Todo);
           },
-          label: Text("Cancle"),
-          icon: Icon(Icons.cancel),
+          label: Text("Update"),
+          icon: Icon(Icons.check_circle),
         ),
         FloatingActionButton.extended(
           heroTag: null,
           onPressed: () {
-            Navigator.pop(context, todo);
+            Navigator.pop(context, null);
           },
-          label: Text("Update"),
-          icon: Icon(Icons.check_circle),
+          label: Text("Cancle"),
+          icon: Icon(Icons.cancel),
         ),
       ],
     );
